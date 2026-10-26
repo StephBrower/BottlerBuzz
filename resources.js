@@ -106,7 +106,7 @@ Focus on practical, high-impact opportunities that can be implemented using Micr
     excerpt: "\"Make the handoffs clear, and keep a person in charge of the decisions.\"",
     footer: "Make the steps visible",
     action: "view",
-    sample: true,
+    sample: false,
     content: `Help me turn this recurring task into a practical workflow.
 
 Task: [describe the task]
@@ -135,7 +135,7 @@ Do not assume access to email, files, systems, or integrations. Keep a person re
     excerpt: "\"Write the recipe, define the result, and show how to check it.\"",
     footer: "Keep the useful parts",
     action: "view",
-    sample: true,
+    sample: false,
     content: `Help me write a reusable, tool-neutral skill: a clear set of instructions for one repeatable task.
 
 Task: [task]
@@ -165,7 +165,7 @@ Make the instructions easy to copy and edit. Distinguish facts supplied by me fr
     excerpt: "\"Test the normal case, the missing-input case, and the messy case.\"",
     footer: "Build in a quality check",
     action: "view",
-    sample: true,
+    sample: false,
     content: `Review the reusable skill below as a careful tester.
 
 Skill instructions: [paste instructions]
@@ -195,7 +195,7 @@ Do not claim tests were run if you only designed them. Separate observed results
     excerpt: "\"Be specific about the job, the permissions, and the approval points.\"",
     footer: "Keep people in control",
     action: "view",
-    sample: true,
+    sample: false,
     content: `Help me define safe, practical boundaries for an AI agent.
 
 Proposed job: [job]
@@ -223,13 +223,13 @@ Default to drafting and recommending, not sending, publishing, deleting, purchas
     topic: "Agents",
     type: "Agents",
     title: "Workflow Coach",
-    summary: "A sample agent starter that helps turn a fuzzy idea into a small, testable workflow.",
+    summary: "Reusable agent instructions that help turn a fuzzy idea into a small, testable workflow.",
     excerpt: "\"One task, a few good questions, and a practical next step.\"",
     footer: "An agent starter to adapt",
     action: "view",
-    sample: true,
-    content: `SAMPLE AGENT STARTER: WORKFLOW COACH
-This is editable sample instruction text, not an installed agent. Adapt it to your approved AI tool and verify its supported features.
+    sample: false,
+    content: `WORKFLOW COACH
+Use these instructions to configure a workflow-coaching agent in your approved AI tool. Verify its supported features before use; copying these instructions does not install or activate an agent.
 
 ROLE
 You are a practical workflow coach. Help the user turn one recurring task into a small, measurable AI-assisted experiment.

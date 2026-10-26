@@ -167,11 +167,6 @@
     const categoryEmpty = state.type !== "all" && !resources.some((resource) => resource.type === state.type);
     empty.querySelector("h3").textContent = categoryEmpty ? `No ${state.type.toLowerCase()} added yet.` : "No matching resources just yet.";
     empty.querySelector("p").textContent = categoryEmpty ? "This category is ready for resources. Explore another category in the meantime." : "Try a shorter search or broaden your resource type, app, or topic.";
-    const pending = resources.some((resource) => resource.action === "download" && !resourceUrl(resource));
-    document.querySelector(".availability-note").replaceChildren(
-      element("strong", "", "A quick heads-up: "),
-      document.createTextNode(`Worksheets are resources you fill out. ${pending ? "Some downloads are pending. " : ""}Resources marked SAMPLE are editable examples, not final presentation materials.`)
-    );
   }
 
   function resetFilters() {

@@ -8,15 +8,17 @@ Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser.
 
 ## Mascot and presenter
 
-- `assets` contains optimized derivatives of the supplied bee GIF and Stephanie Brower portrait. The original attachments are unchanged. The header GIF plays once for under five seconds; reduced-motion users receive a still image. The browser icon and desktop cursor use static PNGs.
+- `assets` contains optimized derivatives of the supplied bee GIF and Stephanie Brower portrait. The original attachments are unchanged. The bee sits beside the single main heading and plays once for under five seconds; reduced-motion users receive a still image. The browser icon and desktop cursor use static PNGs.
 - The bee cursor applies only to devices with a fine pointer and hover support. Links and buttons retain their hand cursor, text fields retain their text cursor, and touchscreens keep their normal behavior. Browsers that cannot display the custom cursor fall back to their default.
-- The upper-right presenter identity is in `index.html`. It currently says "Presented by Stephanie Brower"; no unconfirmed job title or business-card URL is included.
+- The presenter identity sits beside the intro on desktop and below it on mobile, rather than in a separate masthead. It currently says "Presented by Stephanie Brower"; no unconfirmed job title or business-card URL is included. Edit it in `index.html`.
 - Once the digital business-card URL is supplied, change the `.presenter` wrapper from a `div` to an `a`, set `href` to the confirmed URL, and use `target="_blank" rel="noopener noreferrer"` if it should open in a new tab. Until then the photo/name are intentionally not a nonworking link.
+
+The stylesheet and script URLs in `index.html` include content-version query strings so a published update does not reuse older cached assets. Whenever one of those files changes, update its `v` value too (the first 12 characters of its SHA-256 hash work well). Keep the URLs relative so local opening still works.
 
 ## Organization
 
-- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, and the bonus-agent PDF. All four PDFs have active Download buttons. Anti-AI Slop and the sample Workflow Coach remain in the broader library, not the presentation section.
-- **More resources for your workday** contains the expanded prompt and agent library, followed by the other sample prompts so finished resources appear first.
+- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, and the bonus-agent PDF. All four PDFs have active Download buttons. Anti-AI Slop and Workflow Coach remain in the broader library, not the presentation section.
+- **More resources for your workday** contains the reusable prompts, agent instructions, and skills.
 - Each resource appears once. Search and filters apply to both sections; empty sections disappear and each section shows its matching count.
 - **Resource type** answers what it is: Worksheets, Prompts, Agents, or Skills. Templates that contain copyable instructions are labeled Prompt template; agent templates appear in Agents.
 - **App / tool** answers where it is used, including Excel, Outlook, Teams, Copilot Chat, Copilot Cowork, and other tools. Cards show the primary tool; the full-text dialog lists all assigned tools. Related-app filtering is based on each resource's explicit `apps` list, not incidental mentions.
@@ -26,7 +28,7 @@ The expanded library includes 35 additional complete resources. The supplied Wor
 
 ## Edit the library
 
-Edit **resources.js** for the presentation resources and original samples, or **prompt-library.js** for the expanded library, then save and refresh the browser:
+Edit **resources.js** for the presentation resources and original prompts, or **prompt-library.js** for the expanded library, then save and refresh the browser:
 
 - Update each resource's `title`, `summary`, `excerpt`, and `footer`.
 - Keep `id` unique across both files. Use types `Worksheets`, `Prompts`, `Agents`, or `Skills`. Set `topic` to the task category, and `apps` to a nonempty array of tool names with the primary tool first. App and topic dropdown options are generated from the data.
@@ -36,8 +38,8 @@ Edit **resources.js** for the presentation resources and original samples, or **
 - **Workflow Identifier** contains the user's supplied Microsoft 365 Copilot prompt, with a View action and copyable full text. It is not labeled as sample content. Use it in Microsoft 365 Copilot with appropriate access; this site does not access Microsoft 365 data or run the prompt.
 - **Year in Review: My Accomplishments** is adapted for annual reflection, highlighting source-supported contributions, meaningful achievements, and lessons from the current year.
 - **Anti-AI Slop** is an original downloadable editing skill in `skills/anti-ai-slop/SKILL.md`. It removes filler and formulaic language while preserving meaning, factual details, uncertainty, and the writer's voice. Edit that file to change the skill instructions.
-- The four other original prompts in `resources.js` and the Workflow Coach agent are **sample content**, not final user-provided materials. Expanded-library resources and the supplied Workflow Identifier are not marked as samples. All agent entries are instruction text, not installed integrations.
-- Keep `sample: true` for examples. Set it to `false` only after replacing them with approved final content.
+- All current resources are ready-to-adapt prompts, instructions, or downloadable files, with no SAMPLE labels. The original prompts retain their input placeholders and safety guidance. All agent entries are instruction text, not installed integrations.
+- Non-worksheet resources use `sample: false`. This required field is retained for compatibility with the resource schema.
 - Copy an existing object to add a resource, giving it a new ID and separating objects with commas. Counts and search update automatically.
 - Search matches all entered words across titles, summaries, excerpts, topics, types, apps, aliases, and full inline content. Type, app, topic, and search combine; Reset filters clears all four.
 
@@ -68,7 +70,7 @@ Every resource has `action: "view"` or `action: "download"`, regardless of categ
 - **Download with `url`** links to the real file using the browser's download hint. This works for skill files, agent instructions, and other formats as well as PDFs, subject to the same browser/cross-origin limitations above.
 - **Missing file or content** leaves a clearly disabled pending action. A worksheet always needs its real PDF URL; inline text is not substituted for the user's fillable worksheet.
 
-To add a skill or agent download, copy a resource object, set its `type`, `topic`, `action`, and actual file `url`, and keep `sample: true` or `false` accurate. No automatic installation is implied. A configured URL takes precedence over inline content.
+To add a skill or agent download, copy a resource object, set its `type`, `topic`, `action`, and actual file `url`, and use `sample: false` for an approved resource. No automatic installation is implied. A configured URL takes precedence over inline content.
 
 For **Anti-AI Slop**, save the downloaded `SKILL.md` in an `anti-ai-slop` folder if your AI tool supports that skill-folder format, then follow that tool's installation instructions. Otherwise, attach the file or paste its instructions alongside a draft in an approved AI tool. The file includes usage guidance. A download does not install or activate the skill.
 
@@ -93,7 +95,7 @@ Doublecheck refers to specific search/retrieval tool names (`internet_search`, `
 
 ## Copy and keyboard behavior
 
-View opens a native modal dialog with focus contained inside it. Escape or the Close button dismisses it and returns focus to the card. **Copy sample** uses the browser clipboard when permitted. If local-file restrictions or browser permissions block automatic copying, the text is selected with manual-copy instructions. **Select text** is always available, including for mobile copy menus.
+View opens a native modal dialog with focus contained inside it. Escape or the Close button dismisses it and returns focus to the card. **Copy text** uses the browser clipboard when permitted. If local-file restrictions or browser permissions block automatic copying, the text is selected with manual-copy instructions. **Select text** is always available, including for mobile copy menus.
 
 ## GitHub and hosting
 
@@ -114,7 +116,7 @@ GitHub Pages is static hosting, not an access-control system. Confirm organizati
 | `pdfs/` | Four supplied PDF downloads and file replacement instructions |
 | `index.html` | Semantic page and modal structure |
 | `styles.css` | Original responsive light-theme design |
-| `resources.js` | Editable content, sample instructions, and PDF URLs |
+| `resources.js` | Editable prompts, agent instructions, and PDF URLs |
 | `prompt-library.js` | Complete expanded prompt and agent library |
 | `app.js` | Search, filters, cards, dialog, and clipboard behavior |
 | `skills/anti-ai-slop/SKILL.md` | Downloadable editing skill and usage instructions |
