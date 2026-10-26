@@ -20,16 +20,34 @@ button:disabled { cursor: not-allowed; }
 .skip-link { position: absolute; top: -80px; left: 16px; z-index: 3; background: white; padding: 12px 20px; border-radius: 8px; }
 .skip-link:focus { top: 12px; }
 main, .site-footer { width: min(1200px, calc(100% - 96px)); margin-inline: auto; }
-.intro { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 48px; align-items: center; padding: 56px 0 40px; margin-bottom: 32px; border-bottom: 1px solid var(--border); }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: center; padding: 56px 0 40px; margin-bottom: 32px; border-bottom: 1px solid var(--border); }
 .intro-main { min-width: 0; }
 .intro-title { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
 .intro-title picture { display: flex; flex-shrink: 0; }
 .brand-mascot { display: block; width: 96px; height: auto; }
-.presenter { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; text-decoration: none; padding-left: 32px; border-left: 1px solid var(--border); }
-.presenter-photo { display: block; width: 84px; height: 84px; flex-shrink: 0; object-fit: cover; border: 1px solid var(--border); border-radius: 50%; }
-.presenter-copy { display: grid; gap: 5px; line-height: 1.4; }
+.business-card { width: 100%; max-width: 320px; justify-self: end; min-width: 0; }
+.business-card-scene { perspective: 1000px; }
+.business-card-inner { display: grid; transform-style: preserve-3d; transition: transform .45s ease; }
+.business-card.is-flipped .business-card-inner { transform: rotateY(180deg); }
+.business-card-face { grid-area: 1 / 1; min-width: 0; min-height: 236px; padding: 22px; background: white; border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 6px 24px #00000006; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.business-card-front { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.business-card-back { transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.business-card .presenter-label { margin: 0 0 12px; }
+.presenter-photo { display: block; width: 64px; height: 64px; object-fit: cover; border: 1px solid var(--border); border-radius: 50%; }
 .presenter-label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; }
-.presenter-name { font-size: 15px; font-weight: 650; }
+.business-card .presenter-name { margin: 12px 0 0; font-size: 20px; letter-spacing: -.5px; font-weight: 650; }
+#presenter-role { font-size: 12px; line-height: 1.5; color: var(--muted); margin: 6px 0 0; overflow-wrap: anywhere; }
+.business-card-accent { width: 30px; height: 3px; border-radius: 3px; background: #e6bb36; margin-top: 16px; }
+.contact-link { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 10px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; }
+.contact-link[href]:hover { background: #fafafa; border-color: #bdbdbd; }
+.contact-link[aria-disabled="true"] { color: #777; cursor: default; }
+.contact-icon { display: grid; place-items: center; flex-shrink: 0; width: 24px; height: 24px; font-size: 20px; font-weight: 750; line-height: 1; }
+.contact-link strong { display: block; font-size: 13px; font-weight: 650; }
+.contact-detail { display: block; font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
+.contact-link > span:last-child { min-width: 0; }
+.business-card-toggle { display: block; width: 100%; min-height: 44px; margin-top: 8px; padding: 10px; background: transparent; color: var(--ink); border: none; border-radius: 8px; font-size: 12px; font-weight: 650; }
+.business-card-toggle:hover { background: #f7f7f7; }
+.business-card-status { font-size: 11px; text-align: center; color: var(--muted); margin: 3px 0 0; }
 .eyebrow { font-size: 11px; font-weight: 750; letter-spacing: 2px; display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--accent); }
 .eyebrow span { height: 7px; width: 7px; background: var(--ink); border-radius: 50%; }
 h1 { font-size: clamp(36px, 4.5vw, 54px); font-weight: 650; letter-spacing: -2px; line-height: 1.12; margin: 0; }
@@ -136,13 +154,11 @@ dialog h2 { font-size: 28px; margin-right: 24px; }
 @media (max-width: 1000px) {
   main, .site-footer { width: calc(100% - 56px); }
   .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .intro { grid-template-columns: minmax(0, 1fr) 180px; gap: 24px; }
-  .presenter { padding-left: 24px; }
+  .intro { grid-template-columns: minmax(0, 1fr) 280px; gap: 28px; }
 }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .presenter { flex-direction: row; text-align: left; padding-left: 0; border-left: none; }
-  .presenter-photo { width: 48px; height: 48px; }
+  .business-card { justify-self: start; }
 }
 @media (max-width: 640px) {
   main, .site-footer { width: calc(100% - 36px); }

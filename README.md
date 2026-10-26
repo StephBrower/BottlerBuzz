@@ -4,14 +4,15 @@ A standalone resource library for working with AI tools, including tool-specific
 
 ## Open locally
 
-Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, and `app.js` alongside it, plus the `assets`, `skills`, and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
+Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, `app.js`, and `presenter.js` alongside it, plus the `assets`, `skills`, and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
 
 ## Mascot and presenter
 
 - `assets` contains optimized derivatives of the supplied bee GIF and Stephanie Brower portrait. The original attachments are unchanged. The bee sits beside the single main heading and plays once for under five seconds; reduced-motion users receive a still image. The browser icon and desktop cursor use static PNGs.
 - The bee cursor applies only to devices with a fine pointer and hover support. Links and buttons retain their hand cursor, text fields retain their text cursor, and touchscreens keep their normal behavior. Browsers that cannot display the custom cursor fall back to their default.
-- The presenter identity sits beside the intro on desktop and below it on mobile, rather than in a separate masthead. It currently says "Presented by Stephanie Brower"; no unconfirmed job title or business-card URL is included. Edit it in `index.html`.
-- Once the digital business-card URL is supplied, change the `.presenter` wrapper from a `div` to an `a`, set `href` to the confirmed URL, and use `target="_blank" rel="noopener noreferrer"` if it should open in a new tab. Until then the photo/name are intentionally not a nonworking link.
+- The digital business card sits beside the intro on desktop and below it on smaller screens. The front shows Stephanie's photo, name, and configured title. The reverse contains LinkedIn and email actions. No invented contact details, phone number, company, or decorative QR code is included.
+- Set `title`, `email`, and `linkedIn` in the `profile` object at the top of **presenter.js** using confirmed public information. LinkedIn must be an HTTPS profile URL. Missing links remain visibly unavailable, and invalid settings show an explicit setup error. The card uses Stephanie's confirmed title, Reyes Coca-Cola Bottling email address, and LinkedIn profile.
+- Hovering with a desktop pointer reveals the reverse. **Contact details** also works by click, tap, Enter, or Space; **Back to profile** and Escape return to the front. Hidden faces are inert so their links cannot receive keyboard focus. Reduced-motion settings remove the rotation animation.
 
 The stylesheet and script URLs in `index.html` include content-version query strings so a published update does not reuse older cached assets. Whenever one of those files changes, update its `v` value too (the first 12 characters of its SHA-256 hash work well). Keep the URLs relative so local opening still works.
 
