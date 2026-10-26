@@ -4,11 +4,11 @@ A standalone resource library for working with AI tools, including tool-specific
 
 ## Open locally
 
-Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, and `app.js` alongside it, plus the `skills` folder. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
+Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, and `app.js` alongside it, plus the `skills` and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
 
 ## Organization
 
-- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, the bonus-agent PDF placeholder, and Anti-AI Slop skill. The sample Workflow Coach remains in the broader library.
+- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, the bonus-agent PDF, and Anti-AI Slop skill. All four PDFs have active Download buttons. The sample Workflow Coach remains in the broader library.
 - **More resources for your workday** contains the expanded prompt and agent library, followed by the other sample prompts so finished resources appear first.
 - Each resource appears once. Search and filters apply to both sections; empty sections disappear and each section shows its matching count.
 - **Resource type** answers what it is: Worksheets, Prompts, Agents, or Skills. Templates that contain copyable instructions are labeled Prompt template; agent templates appear in Agents.
@@ -33,19 +33,19 @@ Edit **resources.js** for the presentation resources and original samples, or **
 - Copy an existing object to add a resource, giving it a new ID and separating objects with commas. Counts and search update automatically.
 - Search matches all entered words across titles, summaries, excerpts, topics, types, apps, aliases, and full inline content. Type, app, topic, and search combine; Reset filters clears all four.
 
-The three worksheet entries are placeholders for existing PDFs that have not yet been supplied. Their descriptive text is introductory copy, not a verified description of the PDF contents. No PDF files are included or fabricated.
+The three worksheets and bonus-agent guide are the supplied PDFs, copied without changing their contents. See `pdfs/README.md` for the filenames and card mapping.
 
-## Connect the real worksheets
+## PDF downloads and replacements
 
-1. Put the approved PDFs in the existing `pdfs` folder beside `index.html`. On GitHub, open that folder and use **Add file > Upload files**. The folder currently contains instructions only, not PDF files.
-2. In each worksheet object in `resources.js`, replace `url: ""` with its exact relative path, for example `url: "pdfs/workflow.pdf"`. This is a path example, not a bundled file. Match capitalization for future hosting. Use forward slashes in web URLs, including on Windows.
+1. Put approved replacement PDFs in the existing `pdfs` folder beside `index.html`. On GitHub, open that folder and use **Add file > Upload files**.
+2. Set the card's `url` in `resources.js` to its exact relative path, for example `url: "pdfs/Bottler_Buzz_Workflow_Worksheets_Landscape.pdf"`. Match capitalization. Use forward slashes in web URLs, including on Windows.
 3. Keep `action: "download"` for a download link, or use `action: "view"` to open the PDF in a new tab.
 4. Alternatively, set `url` to the actual `https://...` address of a hosted PDF. Make sure your intended audience has permission to access it.
 5. Refresh, open each configured link, and confirm the right PDF is accessible. The site cannot verify that a configured file exists or that the audience has access.
 
-An empty URL keeps the control disabled and visibly labeled **PDF pending**. As URLs are added, real links replace the pending controls. The pending notice updates automatically.
+If a worksheet PDF is removed, an empty URL keeps the control disabled and visibly labeled **PDF pending**. As URLs are added, real links replace the pending controls. The pending notice updates automatically.
 
-The **Bottler Buzz Bonus Agent** card is also a placeholder, with its Download action disabled. No bonus PDF or personal SharePoint link is included. When the approved PDF is available, put it in `pdfs` and set that card's `url` in `resources.js` to its exact filename, for example `pdfs/Bottler_Buzz_Bonus_Agent_Original_Format.pdf`. This example is not an existing file.
+The **Bottler Buzz Bonus Agent** card links directly to `pdfs/Bottler_Buzz_Bonus_Agent_Original_Format.pdf`. It does not use a personal SharePoint link or require an organization sign-in on the public site.
 
 The browser decides whether to download or display a PDF. The HTML `download` hint can be ignored for cross-origin URLs and local files; server headers and browser settings also affect it. Use `action: "view"` when viewing a hosted PDF is more reliable. The site accepts relative filenames and HTTP(S) URLs, not JavaScript or other executable URL schemes.
 
@@ -103,7 +103,7 @@ GitHub Pages is static hosting, not an access-control system. Confirm organizati
 | File | Purpose |
 | --- | --- |
 | `.nojekyll` | Serve all files directly on GitHub Pages, including raw skill downloads |
-| `pdfs/README.md` | Upload and linking instructions for the pending PDFs |
+| `pdfs/` | Four supplied PDF downloads and file replacement instructions |
 | `index.html` | Semantic page and modal structure |
 | `styles.css` | Original responsive light-theme design |
 | `resources.js` | Editable content, sample instructions, and PDF URLs |

@@ -14,7 +14,7 @@ window.BOTTLER_BUZZ_RESOURCES = [
     summary: "A worksheet you fill out to map a recurring task and plan where AI could lend a hand.",
     excerpt: "Start with the task. Make the steps visible. Choose what to improve.",
     footer: "Map your process",
-    url: "",
+    url: "pdfs/Bottler_Buzz_Workflow_Worksheets_Landscape.pdf",
     action: "download"
   },
   {
@@ -27,7 +27,7 @@ window.BOTTLER_BUZZ_RESOURCES = [
     summary: "A worksheet you fill out to shape a useful task into a repeatable AI skill.",
     excerpt: "Define the input, the instructions, and what a good result looks like.",
     footer: "Make it repeatable",
-    url: "",
+    url: "pdfs/Bottler_Buzz_Skill_Builder_Landscape.pdf",
     action: "download"
   },
   {
@@ -40,7 +40,7 @@ window.BOTTLER_BUZZ_RESOURCES = [
     summary: "A worksheet you fill out to define an agent's purpose, boundaries, and human checkpoints.",
     excerpt: "Give your agent a clear job, not an open-ended mandate.",
     footer: "Design with intention",
-    url: "",
+    url: "pdfs/Bottler_Buzz_Agent_Builder_Landscape.pdf",
     action: "download"
   },
   {
@@ -50,11 +50,11 @@ window.BOTTLER_BUZZ_RESOURCES = [
     topic: "Agents",
     type: "Agents",
     title: "Bottler Buzz Bonus Agent",
-    summary: "A place for the bonus agent instruction PDF from the presentation. The downloadable guide will be added here when the file is available.",
-    excerpt: "Bonus agent instructions / PDF coming soon.",
-    footer: "Bonus PDF / coming soon",
+    summary: "Download the bonus agent instructions from the presentation, preserved in their original PDF format.",
+    excerpt: "Save the guide and adapt the instructions in your approved AI tool.",
+    footer: "Bonus agent PDF",
     action: "download",
-    url: "",
+    url: "pdfs/Bottler_Buzz_Bonus_Agent_Original_Format.pdf",
     sample: false
   },
   {
