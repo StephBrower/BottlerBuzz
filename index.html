@@ -1,1 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bottler Buzz resources for turning everyday ideas into practical AI workflows, reusable skills, and useful agents.">
+  <title>Bottler Buzz resources | AI presentation tools and prompts</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="resources.js" defer></script>
+  <script src="prompt-library.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#resources">Skip to resources</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Bottler Buzz home">
+      <span>Bottler <strong>Buzz</strong></span>
+    </a>
+    <span class="header-note">A little inspiration. A practical next step.</span>
+  </header>
 
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span aria-hidden="true"></span> FROM THE PRESENTATION TO YOUR WORKDAY</p>
+      <h1 id="page-title">Bottler Buzz resources</h1>
+      <p class="intro-copy">Worksheets to fill out. Prompts to put to work. Agents and skills to make your own. Start with the presentation tools or find a resource for the app you use.</p>
+      <nav class="intro-links" aria-label="Resource sections"><a href="#presentation-tools">Presentation tools <span aria-hidden="true">&darr;</span></a><a href="#more-resources">Explore the library <span aria-hidden="true">&darr;</span></a></nav>
+    </section>
+
+    <section id="resources" class="library" aria-labelledby="library-title">
+      <div class="section-heading"><h2 id="library-title">Find your next starting point</h2><span class="section-note">Filter by what it is, where you use it, or what you need to do.</span></div>
+      <form class="search-form" role="search">
+        <label class="sr-only" for="search">Search resources</label>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <input id="search" type="search" placeholder="What are you looking for?" autocomplete="off" aria-controls="presentation-grid resource-grid">
+      </form>
+      <div class="filters">
+        <fieldset><legend>Resource type</legend><div class="filter-options" id="type-filters">
+          <button type="button" class="filter" data-value="all" aria-pressed="true">All resources</button>
+          <button type="button" class="filter" data-value="Worksheets" aria-pressed="false">Worksheets</button>
+          <button type="button" class="filter" data-value="Prompts" aria-pressed="false">Prompts</button>
+          <button type="button" class="filter" data-value="Agents" aria-pressed="false">Agents</button>
+          <button type="button" class="filter" data-value="Skills" aria-pressed="false">Skills</button>
+        </div></fieldset>
+        <div class="select-filter"><label for="app-filter">App / tool</label><select id="app-filter" aria-controls="presentation-grid resource-grid"><option value="all">All apps and tools</option></select></div>
+        <div class="select-filter"><label for="topic-filter">Task / topic</label><select id="topic-filter" aria-controls="presentation-grid resource-grid"><option value="all">All tasks and topics</option></select></div>
+      </div>
+      <p class="availability-note"><strong>A quick heads-up:</strong> worksheets are resources you fill out. Their PDF links are pending. Resources marked SAMPLE are editable examples, not final presentation materials.</p>
+      <div class="results-bar"><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p><button id="reset-filters" type="button" class="text-button" hidden>Reset filters</button></div>
+      <noscript><p class="error-message">Enable JavaScript to browse these resources. You can also read the content in resources.js and prompt-library.js.</p></noscript>
+      <p id="load-error" class="error-message" role="alert" hidden></p>
+      <section id="presentation-tools" class="presentation-section" aria-labelledby="presentation-title" hidden>
+        <div class="collection-heading">
+          <div><p class="collection-label">START HERE</p><h2 id="presentation-title">Bottler Buzz AI Presentation Tools</h2><p class="collection-description">The worksheets, prompt, bonus-agent guide, and skill from the session.</p></div>
+          <span id="presentation-count" class="collection-count"></span>
+        </div>
+        <div id="presentation-grid" class="resource-grid"></div>
+      </section>
+      <section id="more-resources" class="more-resources" aria-labelledby="more-title" hidden>
+        <div class="collection-heading"><div><h2 id="more-title">More resources for your workday</h2><p class="collection-description">Practical prompts and agent instructions, with the full text ready to view and copy.</p></div><span id="library-count" class="collection-count"></span></div>
+        <div id="resource-grid" class="resource-grid"></div>
+      </section>
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">&#8981;</span>
+        <h3>No matching resources just yet.</h3>
+        <p>Try a shorter search or broaden your resource type, app, or topic.</p>
+        <button id="empty-reset" class="primary-button" type="button">Show all resources</button>
+      </div>
+    </section>
+    <aside class="closing-note"><span class="closing-symbol" aria-hidden="true">+</span><div><h2>Start with one task. Build from there.</h2><p>Use approved AI tools, leave out sensitive information, and review outputs before putting them to work.</p></div></aside>
+  </main>
+  <footer class="site-footer"><span class="footer-brand">Bottler Buzz</span><span>Practical resources for your next AI experiment.</span></footer>
+
+  <dialog id="resource-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-summary">
+    <div class="dialog-shell">
+      <header class="dialog-heading"><div id="dialog-tags" class="tags"></div><button id="close-dialog" type="button" class="close-button" aria-label="Close resource">&#215;</button></header>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-summary"></p>
+      <p class="usage-notice">Use this resource in the tool it was written for. Check access, licensing, time zones, and any actions before running it. This site does not connect to your work apps or execute prompts.</p>
+      <p class="sample-notice">SAMPLE CONTENT <span>Adapt the placeholders and instructions to your task and approved AI tool.</span></p>
+      <label class="content-label" for="dialog-content">Full sample text</label>
+      <textarea id="dialog-content" readonly spellcheck="false"></textarea>
+      <div class="dialog-actions"><button id="copy-content" class="primary-button" type="button">Copy sample</button><button id="select-content" class="secondary-button" type="button">Select text</button></div>
+      <p id="copy-status" role="status" aria-live="polite" aria-atomic="true">Replace bracketed placeholders before using this sample.</p>
+    </div>
+  </dialog>
+</body>
+</html>
