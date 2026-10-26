@@ -101,19 +101,21 @@ window.BOTTLER_BUZZ_LIBRARY = [
         "content":  "Using the meeting transcript of this meeting, create a concise Executive Meeting Summary with the sections below.\n\nTLDR\n• In max 3 bullets, summarize the core outcome of the meeting.\n• What was the primary objective, and did we achieve it?\n\nDecisions Made\nCreate a table with:\n• Decision\n• Rationale (Why)\n• Status (Final / Open)\n\nActions \u0026 Ownership\nList all action items using this format:\nTask | Owner | Deadline | Priority (Low / High / Critical)\nIf any owner or deadline is missing, explicitly flag it.\n\nRisks \u0026 Misalignment\n• Note any hesitation, disagreement, or unclear commitment.\n• Highlight risks caused by missing decisions or ownership.\n\nFollow-Up Email\nDraft a short follow-up email that:\n• Confirms decisions\n• Assigns ownership\n• Reinforces deadlines\n• Drives accountability\n\nUse direct language. Avoid filler."
     },
     {
-        "id":  "performance-review-to-raise",
-        "topic":  "Career",
+        "id":  "year-in-review-accomplishments",
+        "topic":  "Reflection",
         "type":  "Prompts",
-        "title":  "Performance Review to Raise",
-        "summary":  "Stop underselling your performance. Compare your goals with actual progress, explain accomplishments and incomplete targets in context, and prepare a structured, evidence-based table for your manager, promotion, or compensation discussion.",
-        "excerpt":  "Using the provided list of goals and targets: Identify which goals have been successfully completed and which remain incomplete. For each incomplet...",
-        "footer":  "Career",
+        "title":  "Year in Review: My Accomplishments",
+        "summary":  "Look back at your work this year and uncover your most meaningful accomplishments, contributions, and lessons, supported by evidence from Microsoft 365.",
+        "excerpt":  "Help me identify what I accomplished this year, where I made the biggest contribution, and what I did particularly well.",
+        "footer":  "Reflection",
         "apps":  [
-                     "Copilot Chat"
+                     "Copilot Chat",
+                     "Outlook",
+                     "Teams"
                  ],
         "action":  "view",
         "sample":  false,
-        "content":  "Using the provided list of goals and targets:\n\nIdentify which goals have been successfully completed and which remain incomplete.\n\nFor each incomplete goal, assess whether it is still achievable and explain how.\n\nIf a goal is no longer achievable, explain why, taking into account the efforts already made to fulfil it.\n\nPlease present the results in a table format with the following columns:\nGoal/Target\nStatus (Completed/In Progress/Not Achievable)\nComments (including reasoning, achievability, and effort made)\n\n[PASTE YOUR TARGETS HERE]"
+        "content":  "Help me identify what I accomplished this year, where I made the biggest contribution, and what I did particularly well.\n\nTIMEFRAME\nUse January 1 of the current year through today unless I provide a different date range. State the exact date range used.\n\nSOURCES\nReview relevant Microsoft 365 information you are authorized to access, including my Outlook emails, Teams conversations, meeting notes, documents, project updates, completed tasks, and goals I have shared. If you cannot access these sources, tell me what is unavailable and ask me to provide relevant examples or notes. Do not imply you reviewed material you could not access.\n\nLOOK FOR\n- Projects, deliverables, or milestones I completed or meaningfully advanced.\n- Problems I helped solve and processes I improved.\n- Contributions to employee experience, team effectiveness, or business outcomes.\n- Collaboration, support, or knowledge-sharing that helped others get work done.\n- Skills I developed and applied to real work.\n- Valuable contributions I may have overlooked because they were part of my day-to-day work.\n\nFOR EACH ACCOMPLISHMENT\nIdentify:\n- What I accomplished and when.\n- My specific contribution, distinguished from the team's broader work.\n- Why it mattered to the people or business involved.\n- Supporting evidence, with source links or citations when available.\n- Whether the outcome is completed, in progress, or needs confirmation.\n\nTHEN PROVIDE\n1. My top 5 to 10 accomplishments, ranked by demonstrated impact and strength of evidence. Include fewer if the available evidence does not support that many.\n2. A concise table: Accomplishment | My contribution | Impact | Evidence | Date/status.\n3. Three to five evidence-supported themes describing what I did particularly well, with an example for each. Describe observed actions, not personality traits or unsupported ratings.\n4. A short first-person summary I can use for year-end reflection or a conversation about my work.\n5. Any gaps or claims I should confirm, plus one or two lessons I can carry into next year.\n\nACCURACY AND PRIVACY\n- Never invent achievements, metrics, quotes, ownership, outcomes, or time savings.\n- Use credible qualitative outcomes when no verified metric is available.\n- Distinguish my contribution from team results; label uncertain ownership instead of guessing.\n- Separate completed results from plans and work still in progress.\n- Do not treat a meeting invitation as proof of attendance or contribution.\n- Exclude confidential employee, candidate, compensation, health, or personal information that is not needed to describe my work.\n- Keep the tone grounded, specific, and appreciative, without hype."
     },
     {
         "id":  "copilot-truth-checker",
