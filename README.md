@@ -8,7 +8,7 @@ Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser.
 
 ## Organization
 
-- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, the bonus-agent PDF, and Anti-AI Slop skill. All four PDFs have active Download buttons. The sample Workflow Coach remains in the broader library.
+- **Bottler Buzz AI Presentation Tools** is the yellow-outlined starting section: the three fill-out worksheets, Workflow Identifier, and the bonus-agent PDF. All four PDFs have active Download buttons. Anti-AI Slop and the sample Workflow Coach remain in the broader library, not the presentation section.
 - **More resources for your workday** contains the expanded prompt and agent library, followed by the other sample prompts so finished resources appear first.
 - Each resource appears once. Search and filters apply to both sections; empty sections disappear and each section shows its matching count.
 - **Resource type** answers what it is: Worksheets, Prompts, Agents, or Skills. Templates that contain copyable instructions are labeled Prompt template; agent templates appear in Agents.

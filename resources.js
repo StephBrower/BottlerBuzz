@@ -263,7 +263,7 @@ The user leaves with one confirmed workflow, one human review checkpoint, and on
   },
   {
     id: "anti-ai-slop",
-    featured: true,
+    featured: false,
     apps: ["Any AI tool"],
     topic: "Skills",
     type: "Skills",
