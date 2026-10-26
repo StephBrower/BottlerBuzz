@@ -4,7 +4,14 @@ A standalone resource library for working with AI tools, including tool-specific
 
 ## Open locally
 
-Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, and `app.js` alongside it, plus the `skills` and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
+Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, and `app.js` alongside it, plus the `assets`, `skills`, and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
+
+## Mascot and presenter
+
+- `assets` contains optimized derivatives of the supplied bee GIF and Stephanie Brower portrait. The original attachments are unchanged. The header GIF plays once for under five seconds; reduced-motion users receive a still image. The browser icon and desktop cursor use static PNGs.
+- The bee cursor applies only to devices with a fine pointer and hover support. Links and buttons retain their hand cursor, text fields retain their text cursor, and touchscreens keep their normal behavior. Browsers that cannot display the custom cursor fall back to their default.
+- The upper-right presenter identity is in `index.html`. It currently says "Presented by Stephanie Brower"; no unconfirmed job title or business-card URL is included.
+- Once the digital business-card URL is supplied, change the `.presenter` wrapper from a `div` to an `a`, set `href` to the confirmed URL, and use `target="_blank" rel="noopener noreferrer"` if it should open in a new tab. Until then the photo/name are intentionally not a nonworking link.
 
 ## Organization
 
