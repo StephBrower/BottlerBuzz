@@ -25,7 +25,7 @@ The stylesheet and script URLs in `index.html` include content-version query str
 - **App / tool** answers where it is used, including Excel, Outlook, Teams, Copilot Chat, Copilot Cowork, and other tools. Cards show the primary tool; the full-text dialog lists all assigned tools. Related-app filtering is based on each resource's explicit `apps` list, not incidental mentions.
 - **Task / topic** covers uses such as Planning, Writing, Meetings, Dashboards, or Inbox Management. It is separate from resource type and app.
 
-The expanded library includes 35 additional complete resources. The supplied Workflow Identifier already contains the same prompt as Automate (apart from whitespace), so it remains the single presentation card and is also searchable as "Automate." Full prompt text is stored locally, not replaced with excerpts or links. Source-site navigation, branding, signup code, styles, and tracking are not included.
+The expanded library includes 34 additional complete resources. The supplied Workflow Identifier already contains the same prompt as Automate (apart from whitespace), so it remains the single presentation card and is also searchable as "Automate." The Excel personalization prompt uses the US version; the duplicate EU version has been removed. Full prompt text is stored locally, not replaced with excerpts or links. Source-site navigation, branding, signup code, styles, and tracking are not included.
 
 ## Edit the library
 
