@@ -276,6 +276,20 @@ The user leaves with one confirmed workflow, one human review checkpoint, and on
     sample: false
   },
   {
+    id: "apple-deck-design",
+    featured: false,
+    apps: ["PowerPoint", "Keynote", "Google Slides"],
+    topic: "Presentations",
+    type: "Skills",
+    title: "Apple Deck Design",
+    summary: "A user-supplied slide-design skill for layout, typography, color, and accessible builds. Use it alongside a writing skill: design guidance does not replace copy editing.",
+    excerpt: "\"Every element on a slide has a purpose, a clear rank in the hierarchy, and a consistent position.\"",
+    footer: "Downloadable SKILL.md",
+    action: "download",
+    url: "skills/apple-deck-design/SKILL.md",
+    sample: false
+  },
+  {
     id: "doublecheck",
     apps: ["Any AI tool"],
     topic: "Reasoning",

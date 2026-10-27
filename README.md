@@ -79,16 +79,21 @@ When opening the hub directly from disk, some browsers display the Markdown file
 
 ### Additional supplied skills
 
-These four resources appear under **Skills** in the broader library, each with a Download action:
+These five resources appear under **Skills** in the broader library, each with a Download action:
 
 | Skill | File | Topic |
 | --- | --- | --- |
+| Apple Deck Design | `skills/apple-deck-design/SKILL.md` | Presentations |
 | Doublecheck | `skills/doublecheck/SKILL.md` | Reasoning |
 | HR SWOT Analysis | `skills/hr-swot-analysis/SKILL.md` | HR Strategy |
 | Talent & Leadership Storytelling Generator | `skills/talent-leadership-storytelling-generator/SKILL.md` | Communication |
 | HR Executive Briefing Generator | `skills/hr-executive-briefing-generator/SKILL.md` | Leadership Briefings |
 
 The supplied instructions are preserved. The two pasted skills have Markdown headings and YAML frontmatter added; the HR SWOT metadata name is normalized to lowercase to match its folder. Doublecheck is copied from its attachment without rewriting its instructions.
+
+Apple Deck Design uses the supplied 101-line attachment, with only its missing opening YAML frontmatter delimiter added. It includes builds, transitions, and motion accessibility as well as slide layout and typography. This is a user-supplied adaptation, not a claim of Apple endorsement; its source and authorship references have not been independently verified. No source repository link was supplied, so none is invented.
+
+Both attachments in the latest skills update contained Apple Deck Design, not the described anti-AI writing file. The existing Anti-AI Slop skill remains unchanged pending the actual replacement. Writing style rules should not be described as a way to remove AI watermarks or as proof of human authorship.
 
 Save each `SKILL.md` in its own named folder to avoid overwriting the others. Follow your AI tool's skill installation guidance, or attach/paste the instructions when supported. These downloads do not install skills or grant access to data.
 
