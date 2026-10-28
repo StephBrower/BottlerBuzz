@@ -4,7 +4,7 @@
   // Add only Stephanie's confirmed public details, then update this file's version in index.html.
   const profile = {
     title: "HR, Director at Reyes Coca-Cola Bottling",
-    email: "stephanie.brower@reyesccb.com",
+    email: "BottlerBuzzAI@reyesccb.com",
     linkedIn: "https://www.linkedin.com/in/stephbrower/"
   };
 
