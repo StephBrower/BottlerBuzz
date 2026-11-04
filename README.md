@@ -1,6 +1,12 @@
 # Bottler Buzz resource hub
 
-A standalone resource library for working with AI tools, including tool-specific resources where labeled. No framework, build, install, analytics, external fonts, or network requests are required.
+A standalone resource library for working with AI tools, including tool-specific resources where labeled. No framework, build, install, or external fonts are required. Hosted pages use Microsoft Clarity analytics; the resource library itself works offline.
+
+## Analytics
+
+`index.html` contains the supplied Microsoft Clarity snippet for project `z8k1equut9`. It loads asynchronously on HTTP(S) pages and is skipped for local `file://` use. Blocking analytics does not prevent browsing the library. View analytics in the project's Clarity dashboard; reporting may take time to appear.
+
+Before collecting visitor data, review the project's masking, cookie/consent settings, and applicable privacy notice requirements. Adding this snippet alone does not implement a consent banner. To remove tracking, delete the Clarity script block from `index.html`.
 
 ## Open locally
 
