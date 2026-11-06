@@ -6,11 +6,12 @@
   <meta name="description" content="Bottler Buzz resources for turning everyday ideas into practical AI workflows, reusable skills, and useful agents.">
   <title>Bottler Buzz resources | AI presentation tools and prompts</title>
   <link rel="icon" type="image/png" sizes="64x64" href="assets/bee-icon.png">
-  <link rel="stylesheet" href="styles.css?v=e34d261e07d1">
+  <link rel="stylesheet" href="styles.css?v=6fa291a42f07">
   <script src="resources.js?v=15459982530d" defer></script>
-  <script src="prompt-library.js?v=fffe92b160d1" defer></script>
+  <script src="prompt-library.js?v=95ee4c21d8ad" defer></script>
   <script src="app.js?v=4b63624f15cc" defer></script>
   <script src="presenter.js?v=6a453be5bc97" defer></script>
+  <script src="hidden-buzz.js?v=fa1b98da7601" defer></script>
   <script type="text/javascript">
     if (location.protocol === "https:" || location.protocol === "http:") {
       (function(c,l,a,r,i,t,y){
@@ -105,6 +106,18 @@
       </div>
     </section>
     <aside class="closing-note"><span class="closing-symbol" aria-hidden="true">+</span><div><h2>Start with one task. Build from there.</h2><p>Use approved AI tools, leave out sensitive information, and review outputs before putting them to work.</p></div></aside>
+    <section class="hidden-buzz" aria-labelledby="hidden-buzz-title" hidden>
+      <p class="hidden-buzz-kicker">A little extra buzz. Shhh...</p>
+      <h2 id="hidden-buzz-title"><span aria-hidden="true">&#128029;</span> Found the hidden buzz?</h2>
+      <p id="hidden-buzz-hint">Enter the year Coca-Cola all began to unlock a little surprise.</p>
+      <form id="hidden-buzz-form" novalidate>
+        <label class="sr-only" for="hidden-buzz-year">The year Coca-Cola began</label>
+        <input id="hidden-buzz-year" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="YYYY" autocomplete="off" required aria-describedby="hidden-buzz-hint hidden-buzz-status">
+        <button class="primary-button" type="submit">Unlock the buzz</button>
+      </form>
+      <p id="hidden-buzz-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p id="hidden-buzz-fact" hidden>The first glass of Coca-Cola was served on May 8, 1886, at Jacobs' Pharmacy in Atlanta. <a href="https://www.coca-colacompany.com/about-us/history" target="_blank" rel="noopener noreferrer">Explore the history<span class="sr-only"> (opens in a new tab)</span></a>.</p>
+    </section>
   </main>
   <footer class="site-footer"><span class="footer-brand">Bottler Buzz</span><span>Practical resources for your next AI experiment.</span></footer>
 

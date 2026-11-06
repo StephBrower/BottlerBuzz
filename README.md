@@ -8,6 +8,16 @@ A standalone resource library for working with AI tools, including tool-specific
 
 Before collecting visitor data, review the project's masking, cookie/consent settings, and applicable privacy notice requirements. Adding this snippet alone does not implement a consent banner. To remove tracking, delete the Clarity script block from `index.html`.
 
+## Hidden buzz
+
+The small footer-area challenge in `index.html` is handled by `hidden-buzz.js`. Entering **1886** reveals a thank-you, a sourced Coca-Cola history fact, and a brief yellow/black confetti burst. Incorrect or incomplete answers receive an inline hint. Keyboard and touch submission work without hover. Reduced-motion users receive the same reveal without confetti; changing that preference stops an active burst. No sound, additional tracking calls, storage, or third-party animation library is used.
+
+Keep `hidden-buzz.js` alongside `index.html` when copying the site. The challenge stays hidden if JavaScript is unavailable. The answer is a playful discovery, not a protected secret.
+
+## Spelling conventions
+
+Editable site copy and prompt text use US English, including color, organize, prioritize, and canceled. Resource IDs, URLs, code syntax, and the original uploaded PDFs are preserved. US spelling edits do not change resource instructions or regional data-format preferences.
+
 ## Open locally
 
 Double-click `index.html` in a current Edge, Chrome, Firefox, or Safari browser. Keep `styles.css`, `resources.js`, `prompt-library.js`, `app.js`, and `presenter.js` alongside it, plus the `assets`, `skills`, and `pdfs` folders. The site works directly from `file://`; it does not fetch local JSON. JavaScript must be enabled.
